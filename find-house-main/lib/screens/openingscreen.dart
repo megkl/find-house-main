@@ -99,7 +99,7 @@ class OpeningViewState extends State<OpeningView> {
     );
 
     display() {
-      if (userProvider.users.name != null) {
+      if (userProvider.users != null) {
         return Row(
           children: [
             const Text("Welcome to Property finder ",
@@ -107,7 +107,7 @@ class OpeningViewState extends State<OpeningView> {
             color: Colors.blueAccent,
             fontSize: 20,)),
             Text(
-              userProvider.users.name ?? "",
+              userProvider.users!.name ?? "",
               style: const TextStyle(
                 color: Colors.blueAccent,
                 fontSize: 22,

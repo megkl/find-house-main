@@ -386,7 +386,7 @@ class _SellerFormState extends State<AddProductsScreen>{
                         return;
                       }
 
-                      userProvider.loadProperties(sellerId: userProvider.users.id);
+                      userProvider.loadProperties(sellerId: userProvider.users!.id);
                       await userProvider.reload();
                       appProvider.changeLoading();
                       print("name: ${_currentProperty!.name}");

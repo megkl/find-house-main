@@ -37,7 +37,7 @@ class UserNotifier with ChangeNotifier {
 
   User? get user => _user;
 
-  UserModel get users => _users!;
+  UserModel? get users => _users;
 
 
   final formkey = GlobalKey<FormState>();
@@ -129,7 +129,7 @@ class UserNotifier with ChangeNotifier {
 
   Future<void> reload() async {
     _users = await _UserServices.getUserById(id: user!.uid);
-    await loadProperties(sellerId: users.phoneNo);
+    await loadProperties(sellerId: users!.phoneNo);
 
 
     notifyListeners();

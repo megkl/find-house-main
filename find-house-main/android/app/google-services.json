@@ -8,20 +8,12 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:342325251709:android:75c2cac65f65c3e9fcab14",
+        "mobilesdk_app_id": "1:342325251709:android:697406972372ec57fcab14",
         "android_client_info": {
-          "package_name": "com.designbymeg.findhouse"
+          "package_name": "com.designbymeg.admin_findhouse"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "342325251709-ft9k64pf0cif0vuih00388k2r6kfkqnh.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.designbymeg.findhouse",
-            "certificate_hash": "14f381855ff0933a3c857ce09c3a76d5fca8f2cf"
-          }
-        },
         {
           "client_id": "342325251709-95454d159usr0gou7ua4s7blgvamsda9.apps.googleusercontent.com",
           "client_type": 3
@@ -45,17 +37,17 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:342325251709:android:212a89c53e00fc7dfcab14",
+        "mobilesdk_app_id": "1:342325251709:android:75c2cac65f65c3e9fcab14",
         "android_client_info": {
-          "package_name": "com.example.drinkapp"
+          "package_name": "com.designbymeg.findhouse"
         }
       },
       "oauth_client": [
         {
-          "client_id": "342325251709-bfrso8epmonj78t1l6k76jts7s6kckm8.apps.googleusercontent.com",
+          "client_id": "342325251709-ft9k64pf0cif0vuih00388k2r6kfkqnh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.drinkapp",
+            "package_name": "com.designbymeg.findhouse",
             "certificate_hash": "14f381855ff0933a3c857ce09c3a76d5fca8f2cf"
           }
         },

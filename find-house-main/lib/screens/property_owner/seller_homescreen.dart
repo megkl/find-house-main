@@ -36,10 +36,10 @@ class DashboardScreen extends StatelessWidget {
             UserAccountsDrawerHeader(
               decoration: const BoxDecoration(color: Colors.blueAccent),
               accountName:
-                Text(userProvider.users.name ?? "",
+                Text(userProvider.users!.name ?? "",
               ),
               accountEmail:
-              Text(userProvider.users.email ?? "",
+              Text(userProvider.users!.email ?? "",
               ),
 
             ),
@@ -121,7 +121,7 @@ class DashboardScreen extends StatelessWidget {
                       left: 10,
                       child: Align(
                           alignment: Alignment.bottomCenter,
-                          child: Text(userProvider.users.name ?? "",
+                          child: Text(userProvider.users!.name ?? "",
                             style: const TextStyle(color: Colors.black,fontSize: 28, fontWeight: FontWeight.bold),
                           ))),
 

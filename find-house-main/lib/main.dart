@@ -14,7 +14,16 @@ import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  FirebaseOptions firebaseOptions = FirebaseOptions(
+    
+    appId: '1:342325251709:android:212a89c53e00fc7dfcab14',
+    apiKey: 'AIzaSyC8XEuSZc7L0Ay2pWRYi6Pg773DVm3HZd4',
+    messagingSenderId: '342325251709',
+    projectId: 'drinkapp-16c27',
+   // databaseURL: 'YOUR_DATABASE_URL',
+    storageBucket: 'drinkapp-16c27.appspot.com',
+  );
+  await Firebase.initializeApp( options: firebaseOptions);
   runApp(MultiProvider(
       providers: [
         ChangeNotifierProvider.value(value: AppNotifier()),

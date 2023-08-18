@@ -82,7 +82,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         padding: EdgeInsets.only(top: 20),
                       ),
                       Text(
-                        userProvider.users.name ?? "",
+                        userProvider.users!.name ?? "",
                         style: const TextStyle(
                             fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black),
                       ),
@@ -90,14 +90,14 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         padding: EdgeInsets.only(top: 15),
                       ),
                       Text(
-                        userProvider.users.phoneNo ?? "",
+                        userProvider.users!.phoneNo ?? "",
                         style: const TextStyle(fontSize: 18,color: Colors.black,),
                       ),
                       const Padding(
                         padding: EdgeInsets.only(top: 15),
                       ),
                       Text(
-                        userProvider.users.email ?? "",
+                        userProvider.users!.email ?? "",
                         style: const TextStyle(
                           fontSize: 18,
                             color: Colors.black,
