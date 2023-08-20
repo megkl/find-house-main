@@ -6,10 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 
-class Maps extends StatelessWidget {
-  final Completer<GoogleMapController> _controller = Completer();
+class Maps extends StatefulWidget {
+  const Maps({super.key});
 
-  Maps({Key? key}) : super(key: key);
+  @override
+  State<Maps> createState() => _MapsState();
+}
+
+class _MapsState extends State<Maps> {
+  final Completer<GoogleMapController> _controller = Completer();
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +37,22 @@ class Maps extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          //Text("${propertyNotifier.currentProperty.name}"),
+          Text("${propertyNotifier.currentProperty.name}"),
+          Align(
+          alignment: Alignment.topRight,
+          child: Container(
+            margin: const EdgeInsets.only(right: 24, top: 45),
+            child: IconButton(
+              icon: const Icon(
+                Icons.close,
+                color: Colors.grey,
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ),
+        ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -62,3 +82,6 @@ class Maps extends StatelessWidget {
     );
   }
 }
+  
+
+  

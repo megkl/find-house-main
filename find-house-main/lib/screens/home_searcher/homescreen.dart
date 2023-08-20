@@ -223,6 +223,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
                           MaterialButton(
                             onPressed:() async{
+                              propertyNotifier.currentProperty =
+                            propertyNotifier.propertiesList[index];
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (context)=>Maps()));
                     },

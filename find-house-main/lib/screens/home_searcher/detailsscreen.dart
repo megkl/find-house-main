@@ -6,9 +6,15 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class DetailsScreen extends StatelessWidget {
-  DetailsScreen({Key? key}) : super(key: key);
+class DetailsScreen extends StatefulWidget {
+  const DetailsScreen({super.key});
 
+  @override
+  State<DetailsScreen> createState() => _DetailsScreenState();
+}
+
+class _DetailsScreenState extends State<DetailsScreen> {
+  
   void customLaunch(command) async {
     if (await canLaunch(command)) {
       await launch(command);
@@ -23,6 +29,8 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     PropertyNotifier propertyNotifier = Provider.of<PropertyNotifier>(context);
+    print(propertyNotifier.currentProperty);
+    print(propertyNotifier.currentProperty.map!.latitude);
     Set<Marker> markers = {
       Marker(
         markerId: MarkerId(propertyNotifier.currentProperty.name!),
@@ -149,7 +157,10 @@ class DetailsScreen extends StatelessWidget {
                                   markers: markers,
                                   onMapCreated:
                                       (GoogleMapController controller) {
+                                        setState(() {
                                     _controller.complete(controller);
+                                          
+                                        });
                                   },
                                 ),
                               ),

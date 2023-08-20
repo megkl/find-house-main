@@ -17,7 +17,7 @@ getProperties(UserNotifier userNotifier) async {
   List<Properties> propertiesList = [];
 
   snapshot.docs.forEach((document) {
-    Properties properties = Properties.fromMap(document.data as Map<String, dynamic>);
+    Properties properties = Properties.fromMap(document.data()! as Map<String, dynamic>);
     propertiesList.add(properties);
   });
 
